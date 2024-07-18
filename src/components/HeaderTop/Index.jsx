@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { BsSearch, BsCart } from 'react-icons/bs';
+import ButtonD from '../ButtonD';
 
 
 function HeaderTop() {
     return ( 
-                        <div className='mx-[10%] mt-[2%] flex items-center justify-between'>
+        <div className='mx-[10%] mt-[2%] flex items-center justify-between'>
             <div>
                 <img src={logo} alt=""  width={253} height={44}/>
             </div>
@@ -19,9 +20,7 @@ function HeaderTop() {
                 <Link >Cadastre-se</Link>
             </div>
 
-            <div className='bg-pink-600 text-white w-[11rem] h-[40px] rounded-md flex items-center justify-center p-3' >
-                <Link >Entrar</Link>
-            </div>
+            <ButtonD tamanho="medium" texto="Entrar" />
 
             <div>
             <BsCart className='text-pink-500'/>

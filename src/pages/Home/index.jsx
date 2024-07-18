@@ -1,12 +1,12 @@
 import Header from "../../components/Header";
+import Main from "../../components/Main";
 
 function Home() {
     return ( 
         <>
             <Header/>
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1>
+            <Main/>
+
         </>
      );
 }
