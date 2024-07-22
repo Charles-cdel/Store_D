@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import instance from '../../API/instance';
 
 function Produtos (){
   const [produtos, setProdutos] = useState([]);
-  const [loading, setLoading] = useState(true)
+  
 
+  
   useEffect(() => {
-    axios.get('https://api-store-do1w.onrender.com/shoes')
-    .then(response => {
-      setProdutos(response.data);
-      setLoading(false);
-    })
-    .catch(error =>{
-      console.error(error);
-      setLoading(false)
-    });
-  }, []);
-  if(loading){
-    return <div className=""> Carregando </div>
+    instance.get('/shoes?limit=8')
+        .then((response) => {
+            setProdutos(response.data)
+            console.log(response.data)
+        })
+}, [])
+  
     
-  }
+  
   return(
     <div className="">
-      {produtos.map(produtos=>(
-        <li key={produtos.id}> {produtos.name}</li>
+      {produtos.map(produto=>(
+        <div className="" key={produto.id}>
+           <li > {produto.nome}</li>
+           <li>{produto.preco_original}</li>
+           <div className="">
+           <img src={produto.imagem_url} alt="" />
+           </div>
+           
+        </div>
+        
       ))}
     </div>
   )}
