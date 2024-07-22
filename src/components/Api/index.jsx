@@ -17,13 +17,14 @@ function Produtos (){
     
   
   return(
-    <div className="">
+    <div className="flex flex-wrap">
       {produtos.map(produto=>(
         <div className="" key={produto.id}>
            <li > {produto.nome}</li>
            <li>{produto.preco_original}</li>
-           <div className="">
-           <img src={produto.imagem_url} alt="" />
+           <div className=" flex w-[100%] h-[80%]">
+            
+           <img className='size-[7rem]' src={produto.imagem_url} alt="" />
            </div>
            
         </div>
