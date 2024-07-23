@@ -17,19 +17,31 @@ function Produtos (){
     
   
   return(
-    <div className="flex flex-wrap">
-      {produtos.map(produto=>(
-        <div className="" key={produto.id}>
-           <li > {produto.nome}</li>
-           <li>{produto.preco_original}</li>
-           <div className=" flex w-[100%] h-[80%]">
-            
-           <img className='size-[7rem]' src={produto.imagem_url} alt="" />
+     <div className=" flex flex-wrap justify-center boder-solid border-2 border-orange-500">
+      {produtos.map ((produto) => (
+        <div className="flex w-[15rem] h-[30rem] border-solid border-2 border-red-700 " key={produto.id}>
+
+          <div className="bg-white w-full h-[13.8rem] ">
+          <img className='w-[15rem] self-center' src={produto.imagem_url} alt={produto.nome} />
+          </div>
+          <div className="">
+
+           <p>tenis</p>
+           <h1>{produto.nome}</h1>
+           <div className="flex">
+            <p>
+              R$ {produto.preco_original},00
+            </p>
+            <p>R${produto.preco_desconto},00</p>
            </div>
-           
+          </div>
+
         </div>
-        
-      ))}
+      ) )}
+   
     </div>
-  )}
+   )}
+    
+
+   
 export default Produtos
