@@ -18,6 +18,7 @@ function Home() {
             <StripProduct/>
             <ProductBar/>
             <Produtos/>
+            <RoadFeet/>
             
                         <Footer/>
             
