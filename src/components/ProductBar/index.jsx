@@ -2,7 +2,7 @@ import { MdArrowRightAlt } from 'react-icons/md';
 
 function ProductBar() {
   return (
-    <div className="flex items-center w-[110rem] ml-24 h-[2.4rem] ">
+    <div className="flex items-center w-full ml-24 h-[2.4rem] ">
       <div className="w-[13.15rem] ">
         <p className="font-bold">Produtos em alta</p>
       </div>
