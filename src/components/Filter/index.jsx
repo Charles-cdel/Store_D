@@ -1,4 +1,4 @@
-function Filter() {
+/*function Filter() {
   return (
     <div className="w-[19.25rem] h-[51rem] flex flex-col bg-[#FFFFFF] p-4 rounded-lg shadow-2xl ">
       <div className="w-[7.5rem] h-[2.5rem]">
@@ -186,4 +186,4 @@ function Filter() {
     </div>
   );
 }
-export default Filter;
+export default Filter;*/
